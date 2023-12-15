@@ -42,7 +42,7 @@
             endX = event.changedTouches[0].clientX;
             if (startX > endX) {
                 slideTo(currentSlide + 1);
-            } else if (startX < endX) {
+            } else if (startX < endX) { 
                 slideTo(currentSlide - 1);
             }
         });
