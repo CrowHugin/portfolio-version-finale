@@ -230,22 +230,7 @@ footer{
   /* Couvre tout l'espace disponible */
 }
 /* Définition des boutons de contrôle du carousel */
-.carousel-controls {
-  position: absolute;
-  /* Les boutons sont absolument positionnés */
-  z-index: 5;
-  /* Ils sont placés au-dessus des autres éléments */
-  left: 10%;
-  /* La distance à gauche est de 10% */
-  right: 10%;
-  /* La distance à droite est de 10% */
-  top: 50%;
-  /* La distance du haut est de 50% */
-  display: flex;
-  /* Affiche les boutons en ligne */
-  justify-content: space-between;
-  /* Espacement égal entre les boutons */
-}
+
 /* Style des boutons de contrôle */
 .carousel-controls button {
   padding: 10px;
@@ -399,5 +384,76 @@ form button {
   }
   .in_header{
     width: 35%;
+
+  }.container_carousel{
+    display: flex;
+    justify-content: center;
+  }
+  .carousel{
+    
+    border: 1px solid black;
+}
+  .slide{
+    position: relative;
+    margin:auto;
+    max-width: 1000px;
+  }
+  .contactez-nous ,.boutton_envoi{
+    
+    width: 50%;
+  }
+  form button {
+    font-weight: 700;
+    font-size: 14px;
+  }
+  .container_carousel{
+    display: flex;
+    justify-content: center;
+  }
+  .carousel{
+    display: block;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 30%; 
+    border: none;
+  
+  }
+  .container {
+    overflow: hidden;
+  }
+  /* Définition du carousel */
+  .carousel {
+    position: relative;
+    /* Le carousel est positionné relativement à son parent */
+  }
+  /* Définition de l'élément contenant les diapositives */
+  .carousel-inner {
+    display: flex;
+    /* Affiche les éléments en ligne */
+    overflow: hidden;
+    /* Cache les éléments qui dépassent */
+    height: 100vh;
+    /* Hauteur égale à 100% de la hauteur de la vue */
+    flex-wrap: nowrap;
+    /* Empêche les éléments de se placer sur plusieurs lignes */
+  }
+  /* Définition des diapositives */
+  .slide {
+    flex: 0 0 100%;
+    /* Largeur de chaque diapositive est de 100% */
+    height: 30%;
+    /* Hauteur de chaque diapositive est de 100% */
+    transition: .5s ease-in-out;
+    /* Ajout d'une animation douce pour la transition entre les diapositives */
+  }
+  /* Définition de l'affichage de l'image de chaque diapositive */
+  .slide img {
+    
+    width: 100%;
+    height: 100%; 
+}
+  .carousel-dots{
+    bottom: 35%;
   }
 }

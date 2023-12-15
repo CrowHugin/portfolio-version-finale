@@ -60,3 +60,13 @@ document.addEventListener('DOMContentLoaded', function() {
     document.body.scrollTop = 0; // Pour les navigateurs Safari
     document.documentElement.scrollTop = 0; // Pour les autres navigateurs
   }
+
+//Menu Hamburger
+function toggleMenu() {
+    var x = document.getElementById("idmenuresp");//select element with id menuresp
+    if (x.style.display === "block") {//vérifie si display visible
+        x.style.display = "none";//si oui, il est caché
+    } else {
+        x.style.display = "block";//sinon affiche le
+    }
+}
