@@ -67,7 +67,7 @@ h1 {
 }
 
 .bar {
-  display: none;
+  display:none;
 }
 .menuresp {
   background-color: lightblue;
@@ -82,7 +82,7 @@ h1 {
   display: block;
   margin-bottom: 10px;
   font-size:17px;
-  padding-left: 10px;
+  padding-left:10px;
 }
 /*header*/
 header{
