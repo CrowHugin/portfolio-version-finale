@@ -1,0 +1,403 @@
+/*coprs du texte*/
+
+body{
+  background: linear-gradient(lightblue, greenyellow);
+    border-radius: 15px;
+    width: 100%;
+    margin:auto;
+}
+
+a#cRetour{
+  border-radius:3px;
+  padding:10px;
+  font-size:15px;
+  text-align:center;
+  color:#fff;
+  background:rgba(0, 0, 0, 0.25);
+  position:fixed;
+  right:20px;
+  opacity:1;
+  z-index:99999;
+  transition:all ease-in 0.2s;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  text-decoration: none;
+}
+a#cRetour:before{ content: "\25b2"; }
+a#cRetour:hover{
+  background:rgba(0, 0, 0, 1);
+  transition:all ease-in 0.2s;
+}
+a#cRetour.cInvisible{
+  bottom:-35px;
+  opacity:0;
+  transition:all ease-in 0.5s;
+}
+
+a#cRetour.cVisible{
+  bottom:20px;
+  opacity:1;
+}
+/*barre de navigation*/
+.menu {
+  background-color: lightblue;
+  display: flex;
+  justify-content: space-between;
+  /* Ajout de cette ligne pour séparer les éléments à gauche et à droite */
+}
+.icon{
+  display: none;
+}
+h1 {
+  font-size: 20px;
+  margin: 7px;
+}     
+
+.Navigation a {
+  float: left;
+  padding: 10px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  color: white;
+}
+
+.Navigation a:hover {
+  background-color: #ede1f7;
+  color: black;
+}
+
+.bar {
+  display: none;
+}
+.menuresp {
+  background-color: lightblue;
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+
+.Navigationresp a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  margin-bottom: 10px;
+  font-size:17px;
+  padding-left: 10px;
+}
+/*header*/
+header{
+    color:white;
+    display:flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+}
+.logo_epf{
+  margin-top: 0px;
+  margin-left: 0px;
+  position : absolute;
+}
+.imgprofil{
+  display: flex;
+  justify-content: center;
+
+}
+.imageprofil{
+border-radius: 50%;
+}
+
+/*footer*/
+footer{
+    display: flex;
+    justify-content: center;
+}
+
+/*projets*/
+#projet{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between  ;
+  margin-left :50px;
+  margin-right: 50px;
+}
+.img{
+  border-radius: 15%;
+}
+.txt_projet{
+  display: flex;
+  justify-content: center;
+  color: #2596be;
+}
+.flip-box {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  perspective: 1000px;
+  
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  border: 1px solid #f1f1f1;
+  border-radius: 15%;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateX(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+  background-color: #bbb;
+  color: black;
+  
+  border-radius: 15%;
+}
+
+.flip-box-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateX(180deg);
+  border-radius: 15%;
+  
+}
+
+
+/*-----Carrousel------*/
+.container_carousel{
+  display: flex;
+  justify-content: center;
+}
+.carousel{
+  display: block;
+  justify-content: center;
+  margin-top: 150px;
+  margin-bottom: 150px;
+  width: 800px;
+  height: 600px; 
+  border: 1px solid black;
+
+}
+.container {
+  overflow: hidden;
+}
+/* Définition du carousel */
+.carousel {
+  position: relative;
+  /* Le carousel est positionné relativement à son parent */
+}
+/* Définition de l'élément contenant les diapositives */
+.carousel-inner {
+  display: flex;
+  /* Affiche les éléments en ligne */
+  overflow: hidden;
+  /* Cache les éléments qui dépassent */
+  height: 100vh;
+  /* Hauteur égale à 100% de la hauteur de la vue */
+  flex-wrap: nowrap;
+  /* Empêche les éléments de se placer sur plusieurs lignes */
+}
+/* Définition des diapositives */
+.slide {
+  flex: 0 0 100%;
+  /* Largeur de chaque diapositive est de 100% */
+  height: 100%;
+  /* Hauteur de chaque diapositive est de 100% */
+  transition: .5s ease-in-out;
+  /* Ajout d'une animation douce pour la transition entre les diapositives */
+}
+/* Définition de l'affichage de l'image de chaque diapositive */
+.slide img {
+  
+  width: 800px;
+  height: 600px; 
+  /* Largeur de l'image est de 100% */
+  
+  /* Hauteur de l'image est de 100% */
+  object-fit: cover;
+  /* Couvre tout l'espace disponible */
+}
+/* Définition des boutons de contrôle du carousel */
+.carousel-controls {
+  position: absolute;
+  /* Les boutons sont absolument positionnés */
+  z-index: 5;
+  /* Ils sont placés au-dessus des autres éléments */
+  left: 10%;
+  /* La distance à gauche est de 10% */
+  right: 10%;
+  /* La distance à droite est de 10% */
+  top: 50%;
+  /* La distance du haut est de 50% */
+  display: flex;
+  /* Affiche les boutons en ligne */
+  justify-content: space-between;
+  /* Espacement égal entre les boutons */
+}
+/* Style des boutons de contrôle */
+.carousel-controls button {
+  padding: 10px;
+  /* Ajout de padding pour un meilleur contrôle */
+  background-color: aquamarine;
+  /* Arrière-plan en aquamarine */
+}
+/* Définition des points de contrôle */
+.carousel-dots {
+  position: absolute;
+  /* Les points sont absolument positionnés */
+  z-index: 5;
+  /* Ils sont placés au-dessus des autres éléments */
+  left: 50%;
+  /* La distance à gauche est de 50% */
+  right: 50%;
+  /* La distance à droite est de 50% */
+  bottom: 10%;
+  /*La distance du bas est de 10% */
+  display: flex;
+  /* Affiche les points en ligne */
+  justify-content: center;
+  /* Centrage des points */
+}
+/* Style des points de contrôle */
+.carousel-dots .dot {
+  border-radius: 50%;
+  /* Les points sont en forme de cercle */
+  margin: 5px;
+  /* Ajout d'un margin pour un meilleur contrôle */
+  cursor: pointer;
+  /* Curseur en forme de main pour un meilleur contrôle */
+}
+/* Styles pour les points de navigation du carrousel */
+.carousel-dots .active {
+  /* Border de 10px pour le point actif */
+  border: 10px solid #761530 !important;
+  /* !important permet de surcharger les autres styles éventuels */
+}
+.carousel-dots .inactive {
+  /* Border de 10px pour les points inactifs */
+  border: 10px solid #2596be;
+}
+p{
+  color: #761530;
+}
+
+/*formulaire*/
+.formulaire{
+  display:flex;
+  justify-content: center;
+}
+.contactez-nous {
+  width: 700px;
+  border: 1px solid;
+  border-radius: 8px;
+  padding: 0 50px 0 50px;
+  background: white;
+}
+
+.contactez-nous > h1 {
+  font-weight: 500;
+}
+
+.contactez-nous > p {
+  font-weight: 300;
+}
+
+form div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 83px;
+  margin-top: 25px;
+}
+
+form div > label {
+  margin-bottom: 7px;
+  font-weight: 600;
+}
+
+form div > input, form div > select, form div > textarea {
+  background: white  ;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: Montserrat, "sans-serif";
+  box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.25);
+}
+
+form div > input, form div > select {
+  height: 50px;
+  padding-left: 10px;
+}
+
+form div > select {
+  appearance: none;
+  background-size: 15px;
+  background-position: right 10px top 50%;
+  background-repeat: no-repeat;
+}
+
+form div > textarea {
+  height: 195px;
+  padding: 15px 0px 0px 10px;
+}
+
+form div:last-child {
+  align-items:center;
+  margin-top: 20px;
+}
+
+form button {
+  width: 450px;
+  max-width: 500px;
+  height: 60px;
+  font-weight: 700;
+  font-size: 28px;
+  background: #bbb;
+  border: rgba(48, 48, 48, 0.5) solid 1px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+  color: #303030;
+}
+/* -----------------------------media queries ---------------------------------- */
+
+
+  
+@media (max-width: 767px) {
+  .Navigation a {
+      display: none;
+  }
+
+  .icon {
+      margin-left: auto;
+      display: block;
+      width: 44px;
+      cursor: pointer;
+  }
+
+  .bar {
+      display: block;
+  }
+
+  .Navigationresp a:hover{
+      background-color: #ede1f7;
+    }
+  .imageprofil{
+    width: 35%;
+  }
+  .in_header{
+    width: 35%;
+  }
+}

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title id="haut">Portfolio</title>
+      <link rel="stylesheet" href="css/styles.css"> 
+      <link rel="stylesheet" href="css/formulaire.css" >
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      />
+      <script defer src="java/Scripts.js"></script>
+      
+  </head>
+  <body>
+    <header>
+      <div class="in_header">
+        <h1 ><b>Bastien Kuntz</b></h1>
+        <img class="logo_epf" src="image/imgepf.png"></img>
+      </div>
+      
+      <section class="menu" id="idmenu">
+        <div class="Navigation">
+            <a href="#accueil">Accueil</a>
+            <a href="#carousel">carousel</a>
+            <a href="#diff_projet"> Mes Projets</a>
+            <a href="#formulaire">Contact</a>
+        </div>
+        <a href="#" class="bar" onclick="toggleMenu()">
+            <img class="icon" src="image/img_menu.png" alt="MenuBars">
+        </a>
+    </section>
+
+    <section class="menuresp" id="idmenuresp">
+        <div class="Navigationresp">
+            <a href="#accueil2">Accueil</a>
+            <a href="#news2">Edito</a>
+            <a href="#contact2">Projets</a>
+            <a href="#about2">Contact</a>
+        </div>
+    </section>
+
+              </a>
+            </div>
+    </header>
+            <div class="imgprofil">
+              <img class="imageprofil" src="image/imgprofil.jpeg"></img>
+            </div>
+      
+      
+      
+  </header>
+
+  <main>
+    <div class="container_carousel" >
+        <!-- Élément carrousel -->
+        <div class="carousel" id="carousel">
+          <!-- Conteneur interne pour les diapositives -->
+          <div class="carousel-inner">
+            <!-- Première diapositive -->
+            <div class="slide">
+              <!-- Image de la première diapositive -->
+              <img src="image/img_montagnes.jpg" class="imgres"
+                alt="Image 1">
+            </div>
+            <!-- Deuxième diapositive -->
+            <div class="slide">
+              <!-- Image de la deuxième diapositive -->
+              <img src="image/img_fond.jpeg" class="imgres"
+                alt="Image 2">
+            </div>
+            <!-- Troisième diapositive -->
+            <div class="slide">
+              <!-- Image de la troisième diapositive -->
+              <img src="image/img_Anor_Londo.jpeg" class="imgres"
+                alt="Image 3">
+            </div>
+          </div>
+          <div class="carousel-dots"></div>
+        </div>
+      </div>
+    </div>
+
+
+   <!--projets-->
+   
+   <h1 class="txt_projet" id="diff_projet">Mes différents projets</h1>  
+   <section id="projet">
+  
+    <div class="flip-box">
+      <div class="flip-box-inner">
+        <div class="flip-box-front">
+          <img class="img" src="image/imgbadminton.jpg"></img>
+        </div>
+        <div class="flip-box-back">
+          <a  href="https://www.ffbad.org/" target="_blank"><img src="image/imgbadminton.jpg"  class="img"></a>
+        </div>
+      </div>
+    </div>
+    <div class="flip-box">
+      <div class="flip-box-inner">
+        <div class="flip-box-front">
+          <img  src=""><img class="img" src="image/imgechecs.png"></img></img>
+        </div>
+        <div class="flip-box-back">
+          <a href="http://www.echecs.asso.fr/tournois.aspx" target="_blank"><img class="img" src="image/imgechecs.png"></img></a>
+        </div>
+      </div>
+    </div>
+    <div class="flip-box">
+      <div class="flip-box-inner">
+        <div class="flip-box-front">
+          <img  src="image/img_smash_volley.jpeg " class="img"></img>
+        </div>
+        <div class="flip-box-back">
+          <a href="http://www.ffvb.org/" target="_blank"><img class="img" src="image/img_smash_volley.jpeg"></img></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <br>
+  <br>
+
+  <section id="projet">  
+    <div class="flip-box">
+      <div class="flip-box-inner">
+        <div class="flip-box-front">
+          <img class="img" src="image/imgmurrayfield.jpg">
+        </div>
+        <div class="flip-box-back">
+          <a href="https://scottishrugby.org/tickets-and-events/" target="_blank"><img class="img" src="image/imgmurrayfield.jpg"></img></a>
+        </div>
+      </div>
+    </div>
+    <div class="flip-box">
+      <div class="flip-box-inner">
+        <div class="flip-box-front">
+          <img class="img" src="image/imgAalen.jpg">
+        </div>
+        <div class="flip-box-back">
+          <a href="https://scottishrugby.org/tickets-and-events/" target="_blank"><img class="img" src="image/imgAalen.jpg"></img></a>
+        </div>
+      </div>
+    </div>
+    <div class="flip-box">
+      <div class="flip-box-inner">
+        <div class="flip-box-front">
+          <img class="img" src="image/imgpeinture.jpeg">
+        </div>
+        <div class="flip-box-back">
+          <a href="https://apprendre-la-peinture.com/" target="_blank"><img class="img" src="image/imgpeinture.jpeg"></img></a>
+        </div>
+      </div>
+    </div>    
+  </section>
+  
+  
+  
+  <br>
+  <br>
+
+
+
+  <section class="formulaire" id="formulaire">
+    <div class="contactez-nous">
+      <h1>Contact</h1>
+      <form action="/page-traitement-donnees" method="post">
+        <div>
+          <label for="nom">Votre nom</label>
+          <input type="text" id="nom" name="nom" placeholder="Matin" required>
+        </div>
+        <div>
+          <label for="email">Votre Prénom</label>
+          <input type="text" id="text" name="text" placeholder="Martin" required>
+        </div>
+        <div>
+          <label for="sujet">Pour quel raison voulez-vous me contacter ?</label>
+          <select name="sujet" id="sujet" required>
+              <option value="" disabled selected hidden>Choisissez le raison de votre message</option>
+              <option value="probleme-compte">Un projet m'a plus</option>
+              <option value="question-produit">Envie de parler des échecs(jeu)</option>
+              <option value="autre">Autre...</option>
+          </select>
+        </div>
+        <div>
+          <label for="message">Votre message</label>
+          <textarea id="message" name="message" placeholder="Bonjour, je vous contacte car...." required></textarea>
+        </div>
+        <div>
+          <button type="submit">Envoyer mon message</button>
+        </div>
+      </form>
+    </div>
+  </section>
+  <div><a id="cRetour" class="cInvisible" href="#idmenu"></a></div>
+
+
+
+
+  <br>
+    <main>
+      <footer>
+            <a href="https://github.com/CrowHugin" target="_blank"><img src="image/logo_GitHub.png"></a>
+            <a href="https://twitter.com/NainBes" target="_blank"><img src="image/imgTwitter.jpg"></a>
+            <a href="https://app.milanote.com/1QDzbt1P4Usdu6/home" target="_blank"><img src="image/img milanote.png"></a>
+    </footer>
+    </main>
+    
